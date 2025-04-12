@@ -1,5 +1,7 @@
 # HOW TO USE
 
+banlist.txt Should Not Be Used In The Mod It Should Be On Github
+
 Step 1:
 
 Put UIDs in banlist.txt
