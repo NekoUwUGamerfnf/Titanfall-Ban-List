@@ -32,7 +32,7 @@ void function GithubBan_thread( entity player )
         {
             string githubbans = response.body
             file.githubbanned = split( githubbans, "," )
-            print( "Http Request Success" )
+            print( "[Nekos.Ban.System] Http Request Success" )
             if( IsValid( player ) )
             {
             if( file.githubbanned.contains( player.GetUID() ) )
@@ -43,7 +43,7 @@ void function GithubBan_thread( entity player )
 
     void functionref( HttpRequestFailure ) onFailure = void function ( HttpRequestFailure failure )
     {
-        print( "Http Request Failed" )
+        print( "[Nekos.Ban.System] Http Request Failed" )
     }
     string url = GetConVarString( "banned_uids_website" )
     NSHttpGet( url, {}, onSuccess, onFailure )
@@ -80,15 +80,15 @@ if( ShouldUseGithubBan( player ) )
 GithubBan( player )
 if ( PlayerIsBanned( player ) )
 {
-print( "Player Is Banned Disconnecting Player" )
+print( "[Nekos.Ban.System] Player Is Banned Disconnecting Player" )
 NSDisconnectPlayer( player, "You Are Banned" )
 return
 }
-print( "Not Banned" )
+print( "[Nekos.Ban.System] Player Isn't Banned" )
 }
 
 void function DoJoinStuffInstantBan( entity player )
 {
-print( "Player Is Banned Disconnecting Player" )
+print( "[Nekos.Ban.System] Player Is Banned Disconnecting Player" )
 NSDisconnectPlayer( player, "You Are Banned" )
 }
