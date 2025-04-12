@@ -10,4 +10,4 @@ Step 2:
 
 Put ,0 At The End Of The UIDs
 
-It Should Look Like This `UIDS,0`
+It Should Look Like This `1337,2222,0`
