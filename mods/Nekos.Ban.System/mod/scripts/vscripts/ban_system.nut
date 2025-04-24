@@ -7,6 +7,8 @@ struct {
 
 void function Ban_System_Init()
 {
+if ( IsSingleplayer() )
+return
 UpdateBanList()
 AddCallback_OnClientConnected( DoJoinStuff )
 }
